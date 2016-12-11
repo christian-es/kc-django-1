@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Categoria(models.Model):
-    descripcion = models.CharField()
+    descripcion = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
 
@@ -12,9 +12,9 @@ class Categoria(models.Model):
 
 
 class Articulo(models.Model):
-    titulo = models.CharField(max_length=120)
-    introduccion = models.CharField()
-    cuerpo = models.CharField()
+    titulo = models.CharField(max_length=100)
+    introduccion = models.CharField(max_length=150)
+    cuerpo = models.TextField()
     url = models.URLField(null=True, blank=True)
     fecha_publicacion = models.DateField()
     categoria = models.ForeignKey(Categoria)
