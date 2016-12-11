@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body %}
+<section>
+    {% if post_list|length > 0 %}
+        <h2>Listado de blogs</h2>
+        {% for post in post_list %}
+            <h4>{{ post.titulo }}</h4>
+            <p>{{ post.introduccion }}</p>
+            <p>{{ post.cuerpo }}</p>
+            <p>{{ post.categoria.descripcion }}</p>
+        {% endfor %}
+    {% else %}
+        Este usuario no tiene post registrado.
+    {% endif %}
+</section>
+{% endblock %}

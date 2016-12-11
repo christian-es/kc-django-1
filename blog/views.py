@@ -1,4 +1,5 @@
 from blog.models import Articulo
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.views import View
 from django.utils.decorators import method_decorator
@@ -10,8 +11,16 @@ class HomeView(View):
         return render(request, 'blog/home.html')
 
 
-class BlogView(View):
+class BlogsView(View):
     def get(self, request):
-        articulos = Articulo.objects.all()
-        context = {'articulos_list': articulos}
-        return render(request, 'blog/articulos.html', context)
+        usuarios = User.objects.all()
+        context = {'usuarios_list': usuarios}
+        return render(request, 'blog/blogs.html', context)
+
+
+class PostView(View):
+    def get(self, request, username):
+        usuario = User.objects.filter(username=username)
+        posts = Articulo.objects.filter(created_by_id=usuario[0].pk)
+        context = {'post_list': posts}
+        return render(request, 'blog/post.html', context)

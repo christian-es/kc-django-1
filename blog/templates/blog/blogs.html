@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body %}
+<section>
+    {% if usuarios_list|length > 0 %}
+        <h2>Listado de blogs</h2>
+        {% for usuario in usuarios_list %}
+            <a href="/blogs/{{ usuario.username }}"><p>Blog de {{ usuario.first_name }} {{ usuario.last_name }}</p></a>
+        {% endfor %}
+    {% else %}
+        No tenemos blogs registrados. Únete a nosotros!!
+    {% endif %}
+</section>
+{% endblock %}
