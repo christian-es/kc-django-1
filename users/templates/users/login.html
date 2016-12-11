@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} DBTool - Fundación Tengo Hogar {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icofont.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-login">
+        <form method="post" class="form-signin">
+            {% csrf_token %}
+            <p class="texto-hola">Hola.</p>
+            <input type="text" class="form-control" placeholder="Username" id="username" name="username" required="" autofocus="">
+            <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password" required="">
+            {% if error != None %}
+                <p class="error-login">{{ error }}</p>
+            {% endif %}
+            <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
