@@ -1,0 +1,239 @@
+
+.container {
+    font-family: 'Lato' !important;
+}
+
+.estado-solicitud {
+    background-image: url("../images/estado/solicitud.png");
+}
+
+.estado-baja {
+    background-image: url("../images/estado/baja.png");
+}
+
+.estado-seleccionada {
+    background-image: url("../images/estado/seleccionada.png");
+}
+
+.estado-desestimada {
+    background-image: url("../images/estado/desestimada.png");
+}
+
+.estado-solicitud, .estado-desestimada, .estado-baja, .estado-seleccionada {
+    background-repeat: repeat-y;
+}
+
+div>header {
+    margin-bottom: 20px;
+}
+
+.user-data {
+    text-align: right;
+}
+
+.col-fam-id {
+    width: 35px;
+}
+
+.col-fam-titular {
+    width: 140px;
+}
+
+.col-fam-estado {
+    width: 200px;
+}
+
+.col-fam-vivienda {
+    width: 95px;
+}
+
+.col-fam-alq-social {
+    width: 120px;
+}
+
+.col-fam-domicilio {
+
+}
+
+.col-fam-tel-fijo {
+    width: 90px;
+}
+
+.col-fam-internet {
+    width: 60px;
+}
+
+.col-fam-acciones {
+    width: 140px;
+}
+
+table {
+    text-align: center;
+}
+
+thead {
+    font-weight: bold;
+    background-color: #f7f7f7;
+}
+
+td.col-domicilio {
+    text-align: left;
+}
+
+.alig-left {
+    text-align: left;
+}
+
+.col-par-id {
+    width: 50px;
+}
+
+.col-par-nac {
+    width: 140px;
+}
+
+.col-par-emp {
+    width: 110px;
+}
+
+.col-par-dni {
+    width: 130px;
+}
+
+.col-par-btn {
+    width: 75px;
+}
+
+.col-par-par, .col-par-pna {
+    width: 140px;
+}
+
+.col-par-nac {
+    width: 140px;
+}
+
+.col-par-ac {
+    width: 140px;
+}
+
+.col-fecha-registro {
+    width: 150px;
+}
+
+.detail-row-integrante {
+    margin-bottom: 30px;
+}
+
+.set-properties-integrante {
+    background-color: #E4E3E4;
+    -webkit-box-shadow: inset 0px 8px 5px -1px rgba(112,108,112,1);
+    -moz-box-shadow: inset 0px 8px 5px -1px rgba(112,108,112,1);
+    box-shadow: inset 0px 8px 5px -1px rgba(112,108,112,1);
+}
+
+
+
+/* Login */
+
+.form-signin {
+    max-width: 280px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-style: solid solid none solid;
+    border-color: #000;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-style: none solid solid solid;
+    border-color: rgb(0,0,0);
+    border-top:1px solid rgba(0,0,0,0.08);
+}
+
+.container-login {
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.texto-hola {
+    margin-top: 30px;
+}
+
+.error-login {
+    background-color: #566A71;
+    color: white;
+    font-size: 25px;
+}
+
+
+.td-title{
+    background-color: #F7F7F7;
+}
+
+
+.panel-to-research, .panel-to-result, .panel-to-title {
+    margin-right: 0;
+    margin-left: 0;
+    background-color: white;
+    border-color: #dddddd;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: none;
+    padding: 20px;
+}
+
+
+.panel-to-research:before, .panel-to-result:before, .panel-to-title {
+    top: 15px;
+    left: 15px;
+    font-size: 15px;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.panel-to-research {
+    border-radius: 4px 4px 0 0;
+}
+
+.panel-to-result {
+    border-radius: 0 0 4px 4px;
+}
+
+.panel-to-title {
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.panel-to-research:before {
+    content: "Parámetros de consulta";
+}
+
+.panel-to-result:before {
+    content: "Resultados";
+}
