@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body %}
+<section>
+    {% if post_list|length > 0 %}
+        <h1>Listado de blogs</h1>
+        {% for post in post_list %}
+            <div class="col-sm-6">
+                <h2><a href="/blogs/{{ post.created_by.username }}/{{ post.pk }}">{{ post.titulo }}</a></h2>
+                <h3>{{ post.introduccion }}</h3>
+                <h5>Categoría: {{ post.categoria.descripcion }}</h5>
+                <h5>Autor: {{ post.created_by.first_name}} {{ post.created_by.last_name }}</h5>
+            </div>
+        {% endfor %}
+    {% else %}
+        Este usuario no tiene post registrado.
+    {% endif %}
+</section>
+{% endblock %}

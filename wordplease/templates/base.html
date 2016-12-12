@@ -15,18 +15,20 @@
 <body>
     <div class="container">
         <header class="header-titulo">
-            <p class="user-data">Bienvenido,
-                <b>{% if user.is_authenticated %}
-                        {{ user.first_name }} {{ user.last_name }} | <a class="glyphicon glyphicon-share" href="/logout"></a>
-                    {% endif %}
-                </b>
-            </p>
+            <h1>Wordplease!</h1>
+            {% if user.is_authenticated %}
+                <p class="user-data">Bienvenido,
+                    <b>{{ user.first_name }} {{ user.last_name }}</b> | <a class="glyphicon glyphicon-share" href="/logout"></a>
+                </p>
+            {% else %}
+                <p class="user-data"><a href="/login">Login</a></p>
+            {% endif %}
         </header>
         {% include "includes/menu.html" %}
         {% block body %} {% endblock %}
 
         <footer class="container-fluid text-center col-md-12">
-            footer
+            Christian Escalante
         </footer>
     </div>
 

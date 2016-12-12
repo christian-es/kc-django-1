@@ -38,4 +38,4 @@ class LogoutView(View):
         if request.user.is_authenticated():
             django_logout(request)
 
-        return redirect('/login')
+        return redirect(request.GET.get('next', "/"))

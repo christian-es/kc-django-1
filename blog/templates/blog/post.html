@@ -3,12 +3,13 @@
 {% block body %}
 <section>
     {% if post_list|length > 0 %}
-        <h2>Listado de blogs</h2>
+        <h1>Listado de Post</h1>
         {% for post in post_list %}
-            <h4>{{ post.titulo }}</h4>
-            <p>{{ post.introduccion }}</p>
-            <p>{{ post.cuerpo }}</p>
-            <p>{{ post.categoria.descripcion }}</p>
+            <div class="col-sm-6">
+                <h2><a href="/blogs/{{ post.created_by.username }}/{{ post.pk }}">{{ post.titulo }}</a></h2>
+                <h3>{{ post.introduccion }}</h3>
+                <h5>Categoría: {{ post.categoria.descripcion }}</h5>
+            </div>
         {% endfor %}
     {% else %}
         Este usuario no tiene post registrado.

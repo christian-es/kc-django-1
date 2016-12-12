@@ -3,68 +3,12 @@
     font-family: 'Lato' !important;
 }
 
-.estado-solicitud {
-    background-image: url("../images/estado/solicitud.png");
-}
-
-.estado-baja {
-    background-image: url("../images/estado/baja.png");
-}
-
-.estado-seleccionada {
-    background-image: url("../images/estado/seleccionada.png");
-}
-
-.estado-desestimada {
-    background-image: url("../images/estado/desestimada.png");
-}
-
-.estado-solicitud, .estado-desestimada, .estado-baja, .estado-seleccionada {
-    background-repeat: repeat-y;
-}
-
 div>header {
     margin-bottom: 20px;
 }
 
 .user-data {
     text-align: right;
-}
-
-.col-fam-id {
-    width: 35px;
-}
-
-.col-fam-titular {
-    width: 140px;
-}
-
-.col-fam-estado {
-    width: 200px;
-}
-
-.col-fam-vivienda {
-    width: 95px;
-}
-
-.col-fam-alq-social {
-    width: 120px;
-}
-
-.col-fam-domicilio {
-
-}
-
-.col-fam-tel-fijo {
-    width: 90px;
-}
-
-.col-fam-internet {
-    width: 60px;
-}
-
-.col-fam-acciones {
-    width: 140px;
 }
 
 table {
@@ -84,42 +28,6 @@ td.col-domicilio {
     text-align: left;
 }
 
-.col-par-id {
-    width: 50px;
-}
-
-.col-par-nac {
-    width: 140px;
-}
-
-.col-par-emp {
-    width: 110px;
-}
-
-.col-par-dni {
-    width: 130px;
-}
-
-.col-par-btn {
-    width: 75px;
-}
-
-.col-par-par, .col-par-pna {
-    width: 140px;
-}
-
-.col-par-nac {
-    width: 140px;
-}
-
-.col-par-ac {
-    width: 140px;
-}
-
-.col-fecha-registro {
-    width: 150px;
-}
-
 .detail-row-integrante {
     margin-bottom: 30px;
 }
@@ -130,7 +38,6 @@ td.col-domicilio {
     -moz-box-shadow: inset 0px 8px 5px -1px rgba(112,108,112,1);
     box-shadow: inset 0px 8px 5px -1px rgba(112,108,112,1);
 }
-
 
 
 /* Login */

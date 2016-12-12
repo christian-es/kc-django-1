@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body %}
+<section>
+    <h1>Detalle de Post</h1>
+    <h2>{{ post.titulo }}</h2>
+    <h3>{{ post.cuerpo }}</h3>
+    <h5>Categoría: {{ post.categoria.descripcion }}</h5>
+</section>
+{% endblock %}
